@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+body {
+  background-image: url("/images/Background.gif");
+  background-color: #cccccc;
+
+}
+
+  .bottle-container {
+    text-align: center;
+  }
+  
+  .bottle {
+    width: 360px;
+    height: 425px;
+    background-image: url('/images/champagne-bottle.png'); /* Replace 'path/to/your/image.png' with the actual path to your PNG image */
+    background-size: cover; /* Adjusts the image to cover the entire container */
+    background-repeat: no-repeat; /* Ensures the image is not repeated */
+    position: relative;
+    transition: transform 3s ease-in-out; /* Smooth spinning animation */
+    animation: none;
+}
+
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+  }
+  
+  .shadow__btn {
+    background: rgb(162, 118, 245);
+    box-shadow: 0 0 25px rgb(162, 118, 245);
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(162, 118, 245),
+                0 0 25px rgb(162, 118, 245),
+                0 0 50px rgb(162, 118, 245),
+                0 0 100px rgb(  162, 118, 245);
+  }
