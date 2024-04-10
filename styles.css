@@ -21,9 +21,9 @@ body {
   }
   
   .bottle {
-    width: 360px;
-    height: 425px;
-    background-image: url('/images/champagne-bottle.png'); /* Replace 'path/to/your/image.png' with the actual path to your PNG image */
+    width: 350px;
+    height: 333px;
+    background-image: url('/images/Bottle.png'); /* Replace 'path/to/your/image.png' with the actual path to your PNG image */
     background-size: cover; /* Adjusts the image to cover the entire container */
     background-repeat: no-repeat; /* Ensures the image is not repeated */
     position: relative;
