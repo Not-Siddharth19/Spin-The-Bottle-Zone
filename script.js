@@ -28,7 +28,7 @@ function resetBottle() {
 
   // Hide the button group
   var buttonGroup = document.getElementById('buttonGroup');
-  buttonGroup.style.display = 'none';
+  buttonGroup.style.display = 'none'; 
 
   // Reset the bottle rotation
   var bottle = document.getElementById('bottle');

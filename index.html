@@ -24,7 +24,11 @@
   <button class="shadow__btn" onclick="spinBottle()" id="spinButton" role="button">SPIN</button>
   <div class="button-group" id="buttonGroup" style="display: none;">
     <button class="shadow__btn" onclick="truthButton" onclick="showTruth()">Truth</button>
-    <button class="shadow__btn" onclick="resetBottle()" role="button">RESET</button>
+    <button type="button" class="button" onclick="resetBottle()" role="button">
+      <div class="button-top">RESET</div>
+      <div class="button-bottom"></div>
+      <div class="button-base"></div>
+    </button>
     <button class="shadow__btn" id="dareButton" onclick="showDare()">Dare</button>
   </div>
 </div>
