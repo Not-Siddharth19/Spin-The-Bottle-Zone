@@ -19,12 +19,15 @@
         <a href="more.html">More</a>
     </nav>
 </header>
-<div class="nav-bg"></div>
-
-  <div class="bottle-container">
-    <div class="bottle" id="bottle"></div>
-    <button class="shadow__btn  " onclick="spinBottle()" role="button">SPIN</button>
+<div class="bottle-container">
+  <div class="bottle" id="bottle"></div>
+  <button class="shadow__btn" onclick="spinBottle()" id="spinButton" role="button">SPIN</button>
+  <div class="button-group" id="buttonGroup" style="display: none;">
+    <button class="shadow__btn" onclick="truthButton" onclick="showTruth()">Truth</button>
+    <button class="shadow__btn" onclick="resetBottle()" role="button">RESET</button>
+    <button class="shadow__btn" id="dareButton" onclick="showDare()">Dare</button>
   </div>
+</div>
 
   <script src="script.js"></script>
 
