@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* styles.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 body, html {
     height: 100%;
@@ -8,32 +9,29 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
+
 body {
-  background-image: url("/images/Background.gif");
-  background-color: #cccccc;
-
+    background-image: url("/images/Background.gif");
+    background-color: #cccccc;
 }
 
-  .bottle-container {
+.bottle-container {
     text-align: center;
-  }
-  
-  .bottle {
+}
+
+.bottle {
     width: 350px;
     height: 333px;
-    background-image: url('/images/Bottle.png'); /* Replace 'path/to/your/image.png' with the actual path to your PNG image */
-    background-size: cover; /* Adjusts the image to cover the entire container */
-    background-repeat: no-repeat; /* Ensures the image is not repeated */
+    background-image: url('/images/Bottle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
-    transition: transform 3s ease-in-out; /* Smooth spinning animation */
+    transition: transform 3s ease-in-out;
     animation: none;
 }
 
-
-
-  .shadow__btn {
+.shadow__btn {
     padding: 10px 20px;
     border: none;
     font-size: 17px;
@@ -44,100 +42,61 @@ body {
     text-transform: uppercase;
     transition: 0.5s;
     transition-property: box-shadow;
-  }
-  
-  .shadow__btn {
+}
+
+.shadow__btn {
     background: rgb(162, 118, 245);
     box-shadow: 0 0 25px rgb(162, 118, 245);
-  }
-  
-  .shadow__btn:hover {
+}
+
+.shadow__btn:hover {
     box-shadow: 0 0 5px rgb(162, 118, 245),
                 0 0 25px rgb(162, 118, 245),
                 0 0 50px rgb(162, 118, 245),
                 0 0 100px rgb(  162, 118, 245);
-  }
-  #buttonGroup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Adjust as needed */
-  }
-  
-  #buttonGroup .but {
-    margin-right: 10px; /* Adjust as needed */
-  }
- 
-  #buttonGroup .but {
-    margin-left: 10px; /* Adjust as needed */
-  }
-  
- .but {
-    font-size: 18px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.popup h2 {
+    margin-top: 0;
+    position: relative;
+}
+
+.popup button.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup button.refresh-btn {
+    margin-top: 10px;
     background-color: #1e3be0;
     color: #fff;
-    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border: 0;
-    z-index: 1;
-    user-select: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    white-space: unset;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    font-weight: 900;
-    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
-  }
-  
-  .but:before {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    content: "";
-    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
-    z-index: -1;
-    background-color: #003afa !important;
-    box-shadow: 0 -4px rgba(14, 79, 163, 0.5) inset,
-      0 4px rgba(31, 127, 253, 0.99) inset, -4px 0 rgba(0, 81, 255, 0.5) inset,
-      4px 0 rgba(71, 73, 238, 0.5) inset;
-  }
-  
-  .but:after {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    content: "";
-    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
-    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
-  }
-  
-  .but:hover:before {
-    box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
-      -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
-  }
-  
-  .but:hover:after {
-    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
-  }
-  
-  .but:active {
-    transform: translateY(4px);
-  }
-  
-  .but:active:after {
-    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
-  }
-  
+}
+
+.popup ul {
+    padding-left: 20px;
+}
+
+.popup li {
+    margin-bottom: 5px;
+}
