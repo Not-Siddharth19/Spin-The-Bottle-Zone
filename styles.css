@@ -42,9 +42,6 @@ body {
     text-transform: uppercase;
     transition: 0.5s;
     transition-property: box-shadow;
-}
-
-.shadow__btn {
     background: rgb(162, 118, 245);
     box-shadow: 0 0 25px rgb(162, 118, 245);
 }
@@ -53,7 +50,7 @@ body {
     box-shadow: 0 0 5px rgb(162, 118, 245),
                 0 0 25px rgb(162, 118, 245),
                 0 0 50px rgb(162, 118, 245),
-                0 0 100px rgb(  162, 118, 245);
+                0 0 100px rgb(162, 118, 245);
 }
 
 .popup {
@@ -61,16 +58,23 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
+    background-color: rgba(189, 182, 255, 0.87); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply background blur */
+    padding: 20px; /* Increase padding for more space inside the popup */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: none;
+    width: 80%; /* Utilize 80% of the viewport width */
+    max-width: 300px; /* Limit maximum width to avoid excessive width on larger screens */
+    text-align: center; /* Center content */
 }
+
 
 .popup h2 {
     margin-top: 0;
     position: relative;
+    font-family: 'Roboto Condensed', sans-serif; /* Apply custom font */
+    margin-bottom: 20px; /* Add margin for spacing */
 }
 
 .popup button.close-btn {
@@ -81,22 +85,241 @@ body {
     border: none;
     font-size: 20px;
     cursor: pointer;
+    color: #999; /* Change close button color */
 }
 
 .popup button.refresh-btn {
-    margin-top: 10px;
+    margin-top: 20px; /* Add more space between the buttons */
     background-color: #1e3be0;
     color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 20px; /* Increase padding for larger buttons */
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 10px; /* Add margin between buttons */
 }
 
+.popup button.refresh-btn:hover {
+    background-color: #092aab; /* Change refresh button hover background color */
+}
+
+
 .popup ul {
-    padding-left: 20px;
+    padding-left: 0; /* Remove default padding */
+    list-style: none; /* Remove default list style */
 }
 
 .popup li {
     margin-bottom: 5px;
+    font-family: 'Roboto Condensed', sans-serif; /* Apply custom font */
+    font-size: 16px; /* Adjust font size */
 }
+
+
+
+.truthbut {
+    font-size: 18px;
+    background-color: #008542;
+    color: #fff;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: unset;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  .truthbut:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    z-index: -1;
+    background-color: #008542 !important;
+    box-shadow: 0 -4px rgb(21 108 0 / 50%) inset,
+      0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset,
+      4px 0 rgb(21 108 0 / 50%) inset;
+  }
+  
+  .truthbut:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  .truthbut:hover:before {
+    box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+      -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+  }
+  
+  .truthbut:hover:after {
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  }
+  
+  .truthbut:active {
+    transform: translateY(4px);
+  }
+  
+  .truthbut:active:after {
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+  }
+  
+  .darebut {
+    font-size: 18px;
+    background-color: #e74c3c; /* Red color for dare buttons */
+    color: #fff;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: unset;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  .darebut:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    z-index: -1;
+    background-color: #e74c3c !important; /* Red color for dare buttons */
+    box-shadow: 0 -4px rgb(231 76 60 / 50%) inset,
+      0 4px rgb(255 107 93 / 99%) inset, -4px 0 rgb(255 107 93 / 50%) inset,
+      4px 0 rgb(231 76 60 / 50%) inset;
+  }
+  
+  .darebut:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  .darebut:hover:before {
+    box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+      -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+  }
+  
+  .darebut:hover:after {
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  }
+  
+  .darebut:active {
+    transform: translateY(4px);
+  }
+  
+  .darebut:active:after {
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+  }
+  .closebut {
+    font-size: 18px;
+    background-color: #9b59b6; /* Lavender and purple mixed color for close button */
+    color: #fff;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: unset;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  .closebut:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    z-index: -1;
+    background-color: #9b59b6 !important; /* Lavender and purple mixed color for close button */
+    box-shadow: 0 -4px rgb(155 89 182 / 50%) inset,
+      0 4px rgb(142 68 173 / 99%) inset, -4px 0 rgb(142 68 173 / 50%) inset,
+      4px 0 rgb(155 89 182 / 50%) inset;
+  }
+  
+  .closebut:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  }
+  
+  .closebut:hover:before {
+    box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+      -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+  }
+  
+  .closebut:hover:after {
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  }
+  
+  .closebut:active {
+    transform: translateY(4px);
+  }
+  
+  .closebut:active:after {
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+  }
+    
