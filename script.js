@@ -208,8 +208,18 @@ var dareQuestions = [
 ];
 
 
+
+
+
+// Function to play the spin sound
+function playSpinSound() {
+  var spinSound = document.getElementById('spinSound');
+  spinSound.play();
+}
 // Function to spin the bottle and show the popup
 function spinBottle() {
+
+  playSpinSound();
   // Hide the SPIN button
   var spinButton = document.getElementById('spinButton');
   spinButton.style.display = 'none';
