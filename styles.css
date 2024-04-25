@@ -21,7 +21,7 @@ body {
 }
 
 .bottle {
-    width: 350px;
+    width: 330px;
     height: 333px;
     background-image: url('/images/Bottle.png');
     background-size: cover;

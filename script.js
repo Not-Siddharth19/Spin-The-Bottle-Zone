@@ -216,6 +216,21 @@ function playSpinSound() {
   var spinSound = document.getElementById('spinSound');
   spinSound.play();
 }
+function playPopupSound() {
+  var popupSound = document.getElementById('popupSound');
+  popupSound.play();
+}
+// Function to play the truth sound
+function playTruthSound() {
+  var truthSound = document.getElementById('truthSound');
+  truthSound.play();
+}
+
+// Function to play the dare sound
+function playDareSound() {
+  var dareSound = document.getElementById('dareSound');
+  dareSound.play();
+}
 // Function to spin the bottle and show the popup
 function spinBottle() {
 
@@ -241,6 +256,7 @@ function spinBottle() {
 function showPopup() {
   var popup = document.getElementById('popup');
   popup.style.display = 'block';
+  playPopupSound();
 }
 
 // Function to close the spin popup and reset the bottle rotation
@@ -287,6 +303,7 @@ function showTruthPopup() {
   truthList.appendChild(listItem);
   var spinButton = document.getElementById('spinButton');
   spinButton.style.display = 'none'; // Hide the spin button
+  playTruthSound();
 }
 
 // Function to show the dare popup and populate it with a random task
@@ -303,6 +320,7 @@ function showDarePopup() {
   dareList.appendChild(listItem);
   var spinButton = document.getElementById('spinButton');
   spinButton.style.display = 'none'; // Hide the spin button
+  playDareSound();
 }
 
 // Function to close the truth popup and reload the page
