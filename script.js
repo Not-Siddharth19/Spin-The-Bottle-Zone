@@ -346,3 +346,6 @@ menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
     navbg.classList.toggle('active');
 });
+
+const inputs = document.querySelectorAll(".input");
+
