@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin-the-Bottle-Zone</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="navbar.css" rel="stylesheet" /> 
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body> 
+  <audio id="spinSound">
+    <source src="/Assets/spin_sound.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="popupSound">
+    <source src="/Assets/game-start.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="truthSound">
+    <source src="/Assets/level-up.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="dareSound">
+    <source src="/Assets/drum-sound.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <header class="header">
+    <a href="index.html" class="logo">Spin-The-Bottle-Zone</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="more.html">More</a>
+    </nav>
+  </header>
+  <div class="bottle-container">
+    <div class="bottle" id="bottle"></div>
+    <button class="shadow__btn" onclick="spinBottle()" id="spinButton" role="button">SPIN</button>
+    <div id="popup" class="popup">
+      <h2>Choose:</h2>
+      <button class="truthbut" onclick="showTruthPopup()">TRUTH</button>
+      <button class="darebut" onclick="showDarePopup()">DARE</button>
+    </div>
+    <div id="truthPopup" class="popup">
+      <h2>Truth Questions:</h2>
+      <ul id="truthQuestions"></ul>
+      <button class="closebut" onclick="closeTruthPopup()">CLOSE</button>
+    </div>
+    <div id="darePopup" class="popup">
+      <h2>Dare Tasks:</h2>
+      <ul id="dareTasks"></ul>
+      <button class="closebut" onclick="closeDarePopup()">CLOSE</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
